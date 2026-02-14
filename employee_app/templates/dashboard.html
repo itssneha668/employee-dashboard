@@ -1,0 +1,25 @@
+<h2>Employee Dashboard</h2>
+
+<a href="/add/">
+    <button>Add Employee</button>
+</a>
+
+<table border="1">
+    <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Department</th>
+        <th>Joining Year</th>
+        <th>Salary</th>
+    </tr>
+
+    {% for emp in employees %}
+    <tr>
+        <td>{{ emp.name }}</td>
+        <td>{{ emp.email }}</td>
+        <td>{{ emp.department }}</td>
+        <td>{{ emp.joining_year }}</td>
+        <td>{{ emp.salary }}</td>
+    </tr>
+    {% endfor %}
+</table>
